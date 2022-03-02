@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS role_position(id_role_position INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+role_name VARCHAR(30) NOT NULL
+, role_description TEXT)
