@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS personnel_tasks(id_personnel_task INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT
+, id_personnel INTEGER UNSIGNED
+, task TEXT)
