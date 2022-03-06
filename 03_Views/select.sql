@@ -12,6 +12,9 @@ select role_name, personnel_name, task from role_position rp, role_tasks rt, per
 -- relation pets, customer, type_of_pets
 select customer_name as cliente, pet_name as mascota, type_pet_name as es from customers c, pets p, type_of_pets tp where c.id_customer = p.id_customer and p.id_type_pet = tp.id_type_pet;
 
+-- relation products, brands, item catalogs
+select brand_name as marca, product_name as producto from brands b, products p where b.id_brand = p.id_brand;
+
 -- relation productos, marcas, etc
 
 select id_producto as no,nombre_marca as marca, nombre_producto as producto,tamano, unidad_medida, medida, nombre_sub, nombre_tipo_mascota as mascota 
