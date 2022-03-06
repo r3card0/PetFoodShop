@@ -2,7 +2,7 @@ CREATE TABLE IF NOT EXISTS personnel(id_personnel INTEGER UNSIGNED PRIMARY KEY A
 , id_role_position INTEGER UNSIGNED NOT NULL
 , personnel_name VARCHAR(100) NOT NULL
 , nick_name VARCHAR(30)
-, phone INTEGER
+, phone VARCHAR(18)
 , email VARCHAR(100) UNIQUE
 , personnel_description TEXT);
 -- pensar en agregar --
