@@ -33,6 +33,16 @@ and ps.id_supplier = s.id_supplier
 and pp.id_product = pr.id_product
 and pr.id_product = ppc.id_product;
 
+-- relation  purchases, personnel, suppliers, products
+-- resumen
+select personnel_name as personal, supplier_name as proveedor, ticket, purchase_date as fecha, sum((price * amount)) as total,sum(amount) as "total productos"
+from personnel p, suppliers s, purchases ps, products pr, products_prices_costs ppc, purchase_products pp
+where ps.id_personnel = p.id_personnel
+and ps.id_supplier = s.id_supplier
+and pp.id_product = pr.id_product
+and pr.id_product = ppc.id_product
+group by personnel_name,supplier_name, ticket,purchase_date;
+
 -- relation productos, marcas, etc
 
 select id_producto as no,nombre_marca as marca, nombre_producto as producto,tamano, unidad_medida, medida, nombre_sub, nombre_tipo_mascota as mascota 
