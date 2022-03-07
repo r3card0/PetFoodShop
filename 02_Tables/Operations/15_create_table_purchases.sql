@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS purchases(id_purchase INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT
+, id_personnel INTEGER NOT NULL
+, id_supplier INTEGER NOT NULL
+, ticket VARCHAR(30)
+, purchase_date DATETIME
+);
