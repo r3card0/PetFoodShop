@@ -15,6 +15,9 @@ select customer_name as cliente, pet_name as mascota, type_pet_name as es from c
 -- relation products, brands, item catalogs
 select brand_name as marca, product_name as producto from brands b, products p where b.id_brand = p.id_brand;
 
+-- relation products, brands, products_prices_costs
+select brand_name as marca, product_name as producto, cost as costo, price as precio from brands b, products p, products_prices_costs ppc where b.id_brand = p.id_brand and p.id_product = ppc.id_product;
+
 -- relation productos, marcas, etc
 
 select id_producto as no,nombre_marca as marca, nombre_producto as producto,tamano, unidad_medida, medida, nombre_sub, nombre_tipo_mascota as mascota 
