@@ -18,6 +18,21 @@ select brand_name as marca, product_name as producto from brands b, products p w
 -- relation products, brands, products_prices_costs
 select brand_name as marca, product_name as producto, cost as costo, price as precio from brands b, products p, products_prices_costs ppc where b.id_brand = p.id_brand and p.id_product = ppc.id_product;
 
+-- relation  purchases, personnel, suppliers
+
+select personnel_name as personal, supplier_name as proveedor, ticket, purchase_date as fecha
+from personnel p, suppliers s, purchases ps
+where ps.id_personnel = p.id_personnel
+and ps.id_supplier = s.id_supplier;
+
+-- relation  purchases, personnel, suppliers, products
+select personnel_name as personal, supplier_name as proveedor, ticket, purchase_date as fecha, product_name as producto, price as "precio unitario", amount as cantidad, (price * amount) as subtotal
+from personnel p, suppliers s, purchases ps, products pr, products_prices_costs ppc, purchase_products pp
+where ps.id_personnel = p.id_personnel
+and ps.id_supplier = s.id_supplier
+and pp.id_product = pr.id_product
+and pr.id_product = ppc.id_product;
+
 -- relation productos, marcas, etc
 
 select id_producto as no,nombre_marca as marca, nombre_producto as producto,tamano, unidad_medida, medida, nombre_sub, nombre_tipo_mascota as mascota 
