@@ -1,0 +1,1 @@
+SELECT DISTINCT(mascota) from productos_q;

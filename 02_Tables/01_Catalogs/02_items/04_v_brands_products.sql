@@ -1,0 +1,1 @@
+SELECT brand_name AS MARCA, product_name AS PRODUCTO FROM brands b, products p WHERE b.id_brand = p.id_brand;

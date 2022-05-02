@@ -1,0 +1,1 @@
+SELECT DISTINCT(presentacion) from productos_q;
