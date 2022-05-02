@@ -1,1 +1,0 @@
-SELECT DISTINCT(marca) from productos_q;
