@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS personnel_roles(id_personnel_role INTEGER UNSIGNED PRIMARY KEY AUTO_INCREMENT
+, id_personnel INTEGER NOT NULL
+, id_role INTEGER NOT NULL
+, start_time DATETIME
+, end_time DATETIME);
